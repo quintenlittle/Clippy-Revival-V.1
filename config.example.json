@@ -1,0 +1,25 @@
+{
+  "active_backend": "ollama",
+  "hotkey_toggle": "ctrl+alt+c",
+  "hotkey_capture": "ctrl+alt+space",
+  "ollama": {
+    "model": "dolphin-mistral",
+    "host": "http://localhost:11434"
+  },
+  "anthropic": {
+    "api_key": "",
+    "model": "claude-sonnet-4-6"
+  },
+  "openai": {
+    "api_key": "",
+    "model": "gpt-4o"
+  },
+  "gemini": {
+    "api_key": "",
+    "model": "gemini-2.0-flash"
+  },
+  "huggingface": {
+    "model_id": "microsoft/Phi-3-mini-4k-instruct",
+    "device": "cuda"
+  }
+}
