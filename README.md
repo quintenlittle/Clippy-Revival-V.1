@@ -1,4 +1,6 @@
-# 📎 Clippy Revival *(TEMPORARILY DISABLED THE "READ" ABILITY)*
+# 📎 Clippy Revival 
+
+(TEMPORARILY DISABLED THE "READ" ABILITY)
 
 ### *"It looks like you're trying to bring back a beloved/cursed Windows mascot using artificial intelligence. Would you like help?"*
 
@@ -6,11 +8,11 @@
 
 ---
 
-He showed up uninvited in Office 97. He outlived three of your relationships, two laptops, and one entire career pivot. Microsoft fired him in 2007 like a guy who peaked in middle management. He never even got severance.
+He showed up uninvited in Office 97. He's outlived a handful of your relationships, a stack of laptops, and a couple of career pivots. Microsoft fired him in 2007 like a guy who peaked in middle management. He never even got a severance.
 
 This is his comeback tour. Except now he runs on a real LLM, lives in your system tray, and can actually read what's on your screen instead of just vibing near your Word document insisting you're writing a letter.
 
-You're welcome, and we're sorry, in equal measure.
+You're welcome, and I'm sorry, in equal measure.
 
 ---
 
@@ -109,4 +111,4 @@ The Clippy artwork and animations in `assets/` are © Microsoft, included here f
 
 ---
 
-*Built by someone who remembers when "the cloud" just meant Hotmail, for everyone else who does too.*
+*Built by someone who remembers when "the cloud" just meant Hotmail, @ signs were on the news, and the internet came on CD's in the mailbox. Clippy is reborn. *
