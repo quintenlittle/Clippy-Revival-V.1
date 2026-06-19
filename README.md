@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 📎 Clippy Revival
 
 (TEMPORARILY DISABLED THE "READ" ABILITY)
@@ -5,21 +6,66 @@
 
 [ Yes ]　　[ No, but thanks for asking like you actually mean it this time ]
 
+=======
+<<<<<<< HEAD
+# 📎 Clippy Revival 
+
+(TEMPORARILY DISABLED THE "READ" ABILITY)
+=======
+📎 Clippy Revival
+>>>>>>> bf20ce9 (fixed positioning glitch)
+
+(TEMPORARILY DISABLED THE "READ" ABILITY)
+"It looks like you're trying to bring back a beloved/cursed Windows mascot using artificial intelligence. Would you like help?"
+
+[ Yes ]　　[ No, but thanks for asking like you actually mean it this time ]
+
+<<<<<<< HEAD
+---
+
+=======
+>>>>>>> bf20ce9 (fixed positioning glitch)
+>>>>>>> save-this
 He showed up uninvited in Office 97. He's outlived a handful of your relationships, a stack of laptops, and a couple of career pivots. Microsoft fired him in 2007 like a guy who peaked in middle management. He never even got a severance.
 
 This is his comeback tour. Except now he runs on a real LLM, lives in your system tray, and can actually read what's on your screen instead of just vibing near your Word document insisting you're writing a letter.
 
 You're welcome, and I'm sorry, in equal measure.
+<<<<<<< HEAD
 What this actually is
 
 A floating, draggable, fully transparent desktop Clippy that:
 
+=======
+<<<<<<< HEAD
+
+---
+
+## What this actually is
+
+A floating, draggable, fully transparent desktop Clippy that:
+
+~- **Reads** the text in whatever window you're currently in (Windows Accessibility APIs, not screenshots — he's not *watching* you, he's just nosy in a structured way)~
+- **Answers questions**, with your choice of brain transplant: a free local model via Ollama, a HuggingFace model running on your own GPU, or cloud Claude / GPT / Gemini if you want him smarter than your hardware
+- **Talks back** in an actual hand-drawn speech bubble, typed out letter by letter like it's 1998 and the internet still made that modem noise
+- **Plays his classic animations** — 23 of the originals, ripped straight from the source, gritty low-res charm fully intact
+- Has zero persistent UI cluttering your desktop. Right-click him. That's the whole interface. Just like the actual Clippy required zero documentation to be deeply, personally annoying.
+=======
+What this actually is
+
+A floating, draggable, fully transparent desktop Clippy that:
+
+>>>>>>> save-this
 - Reads the text in whatever window you're currently in (Windows Accessibility APIs, not screenshots — he's not watching you, he's just nosy in a structured way)
 
     Answers questions, with your choice of brain transplant: a free local model via Ollama, a HuggingFace model running on your own GPU, or cloud Claude / GPT / Gemini if you want him smarter than your hardware
     Talks back in an actual hand-drawn speech bubble, typed out letter by letter like it's 1998 and the internet still made that modem noise
     Plays his classic animations — 23 of the originals, ripped straight from the source, gritty low-res charm fully intact
     Has zero persistent UI cluttering your desktop. Right-click him. That's the whole interface. Just like the actual Clippy required zero documentation to be deeply, personally annoying.
+<<<<<<< HEAD
+=======
+>>>>>>> bf20ce9 (fixed positioning glitch)
+>>>>>>> save-this
 
 No telemetry, no cloud account required (unless you want one), no "Microsoft 365 Copilot" rebrand energy. Just a paperclip with eyes and an opinion, running entirely on your machine, answering to nobody but you.
 Before you start
@@ -75,4 +121,18 @@ The code in this repo (everything in src/, the build scripts, the general approa
 
 The Clippy artwork and animations in assets/ are © Microsoft, included here for nostalgic, non-commercial, personal use only. See the note above.
 
+<<<<<<< HEAD
 *Built by someone who remembers when "the cloud" just meant Hotmail, @ signs were on the news, and the internet came on CD's in the mailbox. Clippy is reborn. *
+=======
+<<<<<<< HEAD
+The code in this repo (everything in `src/`, the build scripts, the general approach of "what if Clippy had Wi-Fi and a god complex") is MIT licensed — do whatever you want with it.
+
+The Clippy artwork and animations in `assets/` are © Microsoft, included here for nostalgic, non-commercial, personal use only. See the note above.
+
+---
+
+*Built by someone who remembers when "the cloud" just meant Hotmail, @ signs were on the news, and the internet came on CD's in the mailbox. Clippy is reborn. *
+=======
+*Built by someone who remembers when "the cloud" just meant Hotmail, @ signs were on the news, and the internet came on CD's in the mailbox. Clippy is reborn. *
+>>>>>>> bf20ce9 (fixed positioning glitch)
+>>>>>>> save-this
