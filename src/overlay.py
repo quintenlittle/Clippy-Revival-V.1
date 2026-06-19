@@ -120,8 +120,8 @@ class SpeechBubble(QWidget):
         tail.lineTo(tail_cx, body.bottom() + self.TAIL_H)
         tail.lineTo(tail_cx + self.TAIL_W / 2, body.bottom())
         tail.closeSubpath()
-        painter.setBrush(QColor(255, 255, 250))
-        painter.setPen(QPen(QColor(30, 30, 30), 1.5))
+        painter.setBrush(QColor(255, 255, 250, 195))
+        painter.setPen(QPen(QColor(30, 30, 30, 255), 1.5))
         painter.drawPath(path.united(tail))
 
 
@@ -195,8 +195,8 @@ class OverlayWindow(QWidget):
         self.ask_input.returnPressed.connect(self.on_ask_submit)
         self.ask_input.escape_pressed.connect(self.hide_ask_box)
         self.ask_input.setStyleSheet(
-            "background-color: rgba(15,15,15,210); color: #fff; "
-            "border: 1px solid rgba(255,255,255,70); border-radius: 8px; padding: 6px;"
+            "background-color: rgba(15,15,15,90); color: #fff; "
+            "border: 1px solid rgba(255,255,255,90); border-radius: 8px; padding: 6px;"
         )
         self.ask_input.setVisible(False)
         outer.addWidget(self.ask_input)
