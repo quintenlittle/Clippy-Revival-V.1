@@ -1,11 +1,11 @@
 """
 The overlay window, styled after the classic Office Assistant: a big
 draggable Clippy floating on the desktop. Right-click for actions
-(Read / Ask / Terminate). Replies pop up in a fixed-size speech bubble
-above his head and type out like a typewriter. The bubble is always the
-same height -- a scrollbar appears automatically for longer replies.
-Clippy's position is locked by anchoring the window's bottom-right corner
-whenever the bubble shows or hides.
+(Ask / Animate / Terminate -- Read is temporarily disabled, see on_capture).
+Replies pop up in a fixed-size speech bubble above his head and type out
+like a typewriter. The bubble is always the same height -- a scrollbar
+appears automatically for longer replies. Clippy's position is locked by
+anchoring the window's bottom-right corner whenever the bubble shows or hides.
 """
 import random
 import sys
@@ -22,7 +22,6 @@ from PySide6.QtWidgets import (
 )
 
 from config import load_config, get_active_backend
-import capture
 from paths import resource_path
 
 ASSETS_DIR = Path(resource_path("assets"))
@@ -289,7 +288,6 @@ class OverlayWindow(QWidget):
 
     def contextMenuEvent(self, event):
         menu = QMenu(self)
-        menu.addAction("Read", self.on_capture)
         menu.addAction("Ask", self.show_ask_box)
         menu.addAction("Animate", self.play_random_animation)
         menu.addSeparator()
@@ -346,22 +344,10 @@ class OverlayWindow(QWidget):
             self.activateWindow()
 
     def on_capture(self):
-        text = capture.capture_context()
-        self._last_context = text
-        if text.strip():
-            self._show_bubble(
-                f"Got it — read {len(text)} chars from the active window.\n"
-                f"Right-click > Ask to ask about it."
-            )
-        else:
-            self._show_bubble(
-                "Couldn't read any text from that window.\n"
-                "Try copying the text first, then Read again."
-            )
-        if not self.isVisible():
-            self.show()
-            self.raise_()
-            self.activateWindow()
+        # Disabled for now -- Windows UI Automation capture wasn't reliable
+        # enough across apps. capture.py is still here for whenever a better
+        # approach (OCR fallback, different API, etc.) is worth wiring back in.
+        pass
 
     def show_ask_box(self):
         if not self.isVisible():

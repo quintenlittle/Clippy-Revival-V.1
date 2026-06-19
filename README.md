@@ -67,8 +67,7 @@ Got an API key for Claude, GPT, or Gemini instead of (or alongside) Ollama? Run 
 
 | Option | Does |
 |---|---|
-| **Read** | Reads whatever's in your currently focused window |
-| **Ask** | Pops a tiny input box, cursor blinking and ready — ask him anything, optionally about whatever you just had him Read |
+| **Ask** | Pops a tiny input box, cursor blinking and ready — ask him anything |
 | **Animate** | Plays one of his 23 classic animations at random, then settles back down |
 | **Terminate** | Mercy killing, round two. He'll understand. He's used to it. |
 
