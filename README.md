@@ -6,7 +6,7 @@
 
 ---
 
-He showed up uninvited in Office 97. He outlived a slew of relationships, a stack laptops, and a few career pivots. Microsoft fired him in 2007 like a guy who peaked in middle management. He never even got a severance package.
+He showed up uninvited in Office 97. He's outlived a handful of relationships, a stack laptops, and a few career pivots. Microsoft fired him in 2007 like a guy who peaked in middle management. He never even got a severance package.
 
 This is his comeback tour. Except now he runs on a real LLM, lives in your system tray, and can actually read what's on your screen instead of just vibing near your Word document insisting you're writing a letter.
 
