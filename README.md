@@ -1,4 +1,4 @@
-# 📎 Clippy Revival ***(((TEMPORARILY DISABLED "READ" ABILITY)))***
+# 📎 Clippy Revival *(TEMPORARILY DISABLED THE "READ" ABILITY)*
 
 ### *"It looks like you're trying to bring back a beloved/cursed Windows mascot using artificial intelligence. Would you like help?"*
 
