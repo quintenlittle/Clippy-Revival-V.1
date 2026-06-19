@@ -227,10 +227,15 @@ class OverlayWindow(QWidget):
 
     # ---------- positioning ----------
 
-    def _anchor_bottom_right(self):
+    def _anchor_bottom_right(self, old_br=None):
         """Resize to fit content, then slide the window so its bottom-right
-        corner stays exactly where it was. Clippy doesn't move on screen."""
-        old_br = self.geometry().bottomRight()
+        corner stays exactly where it was. Clippy doesn't move on screen.
+        Pass old_br explicitly if the corner needs to be captured BEFORE a
+        setVisible()/setText() call -- those can trigger an implicit resize
+        on their own (SetFixedSize layout constraint), so capturing it
+        afterward is too late and the anchor math ends up wrong."""
+        if old_br is None:
+            old_br = self.geometry().bottomRight()
         self.adjustSize()
         geo = self.geometry()
         screen = QApplication.primaryScreen().availableGeometry()
@@ -239,13 +244,15 @@ class OverlayWindow(QWidget):
         self.move(x, y)
 
     def position_bottom_right(self):
-        """Initial placement — bottom-right of the screen."""
+        """Initial placement — bottom-right of the screen, with enough
+        clearance above the taskbar that opening the bubble/ask box doesn't
+        creep down into it."""
         self.adjustSize()
         geo = self.geometry()
         screen = QApplication.primaryScreen().availableGeometry()
         self.move(
             screen.right() - geo.width() - 30,
-            screen.bottom() - geo.height() - 30,
+            screen.bottom() - geo.height() - 150,
         )
 
     # ---------- animation ----------
@@ -301,10 +308,11 @@ class OverlayWindow(QWidget):
         if self._tw_timer:
             self._tw_timer.stop()
         was_hidden = not self.bubble.isVisible()
+        old_br = self.geometry().bottomRight() if was_hidden else None
         self.bubble.setText(text)
         self.bubble.setVisible(True)
         if was_hidden:
-            self._anchor_bottom_right()
+            self._anchor_bottom_right(old_br)
 
     def _type_out_bubble(self, reply):
         """Show reply with typewriter animation.
@@ -312,11 +320,12 @@ class OverlayWindow(QWidget):
         if self._tw_timer:
             self._tw_timer.stop()
         was_hidden = not self.bubble.isVisible()
+        old_br = self.geometry().bottomRight() if was_hidden else None
         self.bubble.setText(reply)
         self.bubble.text_label.setText("")   # blank -- typewriter fills it in
         self.bubble.setVisible(True)
         if was_hidden:
-            self._anchor_bottom_right()
+            self._anchor_bottom_right(old_br)
 
         self._tw_text = reply
         self._tw_index = 0
@@ -354,16 +363,18 @@ class OverlayWindow(QWidget):
             self.show()
             self.raise_()
         was_hidden = not self.ask_input.isVisible()
+        old_br = self.geometry().bottomRight() if was_hidden else None
         self.ask_input.setVisible(True)
         if was_hidden:
-            self._anchor_bottom_right()
+            self._anchor_bottom_right(old_br)
         self.ask_input.setFocus()
         self.activateWindow()
 
     def hide_ask_box(self):
+        old_br = self.geometry().bottomRight()
         self.ask_input.clear()
         self.ask_input.setVisible(False)
-        self._anchor_bottom_right()
+        self._anchor_bottom_right(old_br)
 
     def on_ask_submit(self):
         question = self.ask_input.text().strip()
@@ -411,6 +422,6 @@ def main():
     app = QApplication(sys.argv)
     app.setQuitOnLastWindowClosed(False)
     win = OverlayWindow()
+    win.position_bottom_right()
     win.show()
-    QTimer.singleShot(50, win.position_bottom_right)
     sys.exit(app.exec())
