@@ -18,7 +18,7 @@ You're welcome, and we're sorry, in equal measure.
 
 A floating, draggable, fully transparent desktop Clippy that:
 
-- **Reads** the text in whatever window you're currently in (Windows Accessibility APIs, not screenshots — he's not *watching* you, he's just nosy in a structured way)
+~- **Reads** the text in whatever window you're currently in (Windows Accessibility APIs, not screenshots — he's not *watching* you, he's just nosy in a structured way)~
 - **Answers questions**, with your choice of brain transplant: a free local model via Ollama, a HuggingFace model running on your own GPU, or cloud Claude / GPT / Gemini if you want him smarter than your hardware
 - **Talks back** in an actual hand-drawn speech bubble, typed out letter by letter like it's 1998 and the internet still made that modem noise
 - **Plays his classic animations** — 23 of the originals, ripped straight from the source, gritty low-res charm fully intact
