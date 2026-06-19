@@ -427,6 +427,14 @@ class OverlayWindow(QWidget):
 def main():
     app = QApplication(sys.argv)
     app.setQuitOnLastWindowClosed(False)
+    # Explicit QToolTip styling -- without this, tooltip popups can render
+    # with broken/black backgrounds in a frameless translucent window like
+    # this one, since they're separate top-level windows that don't
+    # automatically inherit per-widget stylesheets.
+    app.setStyleSheet(
+        "QToolTip { background-color: rgba(20, 20, 20, 235); color: #ffffff; "
+        "border: 1px solid rgba(255,255,255,80); border-radius: 6px; padding: 4px 8px; }"
+    )
     win = OverlayWindow()
     win.show()
     QTimer.singleShot(50, win.position_bottom_right)

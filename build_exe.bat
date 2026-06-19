@@ -1,15 +1,22 @@
 @echo off
-call venv\Scripts\activate.bat
+set VENV_PY=venv\Scripts\python.exe
 
-pip show pyinstaller >nul 2>nul
-if errorlevel 1 (
-    pip install pyinstaller
+if not exist "%VENV_PY%" (
+    echo %VENV_PY% not found -- run install.bat first.
+    pause
+    exit /b 1
 )
 
-pyinstaller --onefile --windowed ^
+"%VENV_PY%" -m pip show pyinstaller >nul 2>nul
+if errorlevel 1 (
+    "%VENV_PY%" -m pip install pyinstaller
+)
+
+"%VENV_PY%" -m PyInstaller --onefile --windowed ^
     --icon=assets\icon.ico ^
     --add-data "assets;assets" ^
     --paths src ^
+    --collect-all keyboard ^
     --name Clippy ^
     src\main.py
 

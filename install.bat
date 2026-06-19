@@ -11,9 +11,16 @@ if errorlevel 1 (
 )
 
 python -m venv venv
-call venv\Scripts\activate.bat
-python -m pip install --upgrade pip
-pip install -r requirements.txt
+
+set VENV_PY=venv\Scripts\python.exe
+if not exist "%VENV_PY%" (
+    echo Something went wrong creating the virtual environment -- %VENV_PY% wasn't created.
+    pause
+    exit /b 1
+)
+
+"%VENV_PY%" -m pip install --upgrade pip
+"%VENV_PY%" -m pip install -r requirements.txt
 
 echo.
 echo ============================================
