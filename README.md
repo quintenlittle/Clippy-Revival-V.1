@@ -6,11 +6,11 @@
 
 ---
 
-He showed up uninvited in Office 97. He outlived three of your relationships, two laptops, and one entire career pivot. Microsoft fired him in 2007 like a guy who peaked in middle management. He never even got severance.
+He showed up uninvited in Office 97. He outlived a slew of relationships, a stack laptops, and a few career pivots. Microsoft fired him in 2007 like a guy who peaked in middle management. He never even got a severance package.
 
 This is his comeback tour. Except now he runs on a real LLM, lives in your system tray, and can actually read what's on your screen instead of just vibing near your Word document insisting you're writing a letter.
 
-You're welcome, and we're sorry, in equal measure.
+You're welcome, and I'm sorry, in equal measure.
 
 ---
 
@@ -33,7 +33,7 @@ No telemetry, no cloud account required (unless you want one), no "Microsoft 365
 You need:
 - **Windows 10/11**
 - **Python 3.13** — grab it from **[python.org/downloads](https://www.python.org/downloads/)**, NOT bundled in this repo (nobody needs a 25MB installer.exe sitting in their git history for the rest of time). On the install screen, check **"Add python.exe to PATH"** — this is the step everyone skips and then is sad about.
-- Either **[Ollama](https://ollama.com)** (free, local, runs entirely offline, your secrets stay yours) or an API key for Claude/GPT/Gemini if you want to phone a friend with more VRAM than you.
+- Either **[Ollama](https://ollama.com)** (free, local, runs entirely offline, your secrets stay yours) or an API key for Claude/GPT/Gemini if you want to phone a friend with more VRAM than a small country.
 
 ---
 
