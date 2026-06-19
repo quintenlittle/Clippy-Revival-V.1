@@ -185,9 +185,6 @@ class OverlayWindow(QWidget):
         )
         self.avatar_label.setPixmap(self._static_pixmap)
         self.avatar_label.setFixedSize(AVATAR_DISPLAY_SIZE, AVATAR_DISPLAY_SIZE)
-        self.avatar_label.setToolTip(
-            f"Clippy — {self.cfg.get('active_backend')} (right-click for options)"
-        )
         self.avatar_label.setAlignment(Qt.AlignCenter)
         outer.addWidget(self.avatar_label, alignment=Qt.AlignHCenter)
         self._movie = None
@@ -427,14 +424,6 @@ class OverlayWindow(QWidget):
 def main():
     app = QApplication(sys.argv)
     app.setQuitOnLastWindowClosed(False)
-    # Explicit QToolTip styling -- without this, tooltip popups can render
-    # with broken/black backgrounds in a frameless translucent window like
-    # this one, since they're separate top-level windows that don't
-    # automatically inherit per-widget stylesheets.
-    app.setStyleSheet(
-        "QToolTip { background-color: rgba(20, 20, 20, 235); color: #ffffff; "
-        "border: 1px solid rgba(255,255,255,80); border-radius: 6px; padding: 4px 8px; }"
-    )
     win = OverlayWindow()
     win.show()
     QTimer.singleShot(50, win.position_bottom_right)
