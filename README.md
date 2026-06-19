@@ -110,4 +110,4 @@ The Clippy artwork and animations in `assets/` are © Microsoft, included here f
 
 ---
 
-*Built by someone who remembers when "the cloud" just meant Hotmail, for everyone else who does too.*
+*Built by someone who remembers when "the cloud" just meant Hotmail, @ signs were on the news, and the internet came on CD's in the mailbox. Clippy is back baby!*
